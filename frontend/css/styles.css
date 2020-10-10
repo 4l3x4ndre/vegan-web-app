@@ -1,10 +1,33 @@
-.center {
-    margin: 0;
-    position: absolute;
-    left: 50%;
-    -ms-transform: translate(-50%);
-    transform: translate(-50%);
+/*region IMAGES*/
+
+.background-image{
+    transition: transform 2s;
+    width: 70%
 }
+.background-image:hover {
+    transform: scale(1.3);
+}
+/*endregion*/
+
+.cont {
+    width: 100%;
+    max-width: 400px;
+}
+.cont img {
+    width: 100%;
+    height: auto;
+}
+
+.cont .btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+
+/*region SPLIT MOTION*/
 
 /* Content centered horizontally and vertically */
 .centered {
@@ -35,7 +58,9 @@
     right: 0;
     background-color: #6C8C80;
 }
+/*endregion*/
 
+/*region THEME*/
 .darktheme {
     /* background-color: #404040; */
     background-image: radial-gradient(circle at 0% 0%, #2E5159, #6C8C80);
@@ -45,3 +70,4 @@
     background-color: #F0F8FF;
     background-image: radial-gradient(circle at 0% 0%, #E5F230, #0AFB60);
 }
+/*endregion*/

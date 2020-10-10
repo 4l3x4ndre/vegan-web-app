@@ -16,31 +16,37 @@
 
         <div class="split left">
             <div class="centered">
+                <img src="./resources/scooter.svg" class="background-image">
                 <div class="webflow-style-input">
                     <button class="centerbutton" type="submit" id="searchrandom" onclick="getRandomRecipe()">
                         Get a random recipe
                         <i class="fas fa-paper-plane"></i>
                     </button>
                 </div>
+
+                <div id="leftcontent"></div>
             </div>
         </div>
         <div class="split right">
             <div class="centered">
-                <div class="webflow-style-input">
-                    <input id="inputquery"placeholder="What's your ingredients?"/>
-                    <button type="submit" id="searchquery" onclick="getRecipeFromIngredients()"><i class="fas fa-search"></i></button>
+                <div class="cont">
+                    <img src="./resources/truck.svg" class="background-image">
+                    <div class="webflow-style-input btn">
+                        <input id="inputquery"placeholder="What's your ingredients?"/>
+                        <button type="submit" id="searchquery" onclick="getRecipeFromIngredients()"><i class="fas fa-search"></i></button>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="container">
+<!--        <div class="container">-->
 
-            <div class="demo-flex-spacer"></div>
+<!--            <div class="demo-flex-spacer"></div>-->
 
 
-            <div class="demo-flex-spacer"></div>
-            <div class="demo-flex-spacer"></div>
-        </div>
+<!--            <div class="demo-flex-spacer"></div>-->
+<!--            <div class="demo-flex-spacer"></div>-->
+<!--        </div>-->
 
         <!--<script src="https://kit.fontawesome.com/b4f6af07eb.js" crossorigin="anonymous"></script>-->
         <script src="./index.js"></script>
