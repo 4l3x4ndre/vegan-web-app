@@ -7,9 +7,9 @@ body, ul, li {
   padding: 0;
 }
 input {
-  border-style: none;
-  background: transparent;
-  outline: none;
+  /*border-style: none;*/
+  /*background: transparent;*/
+  /*outline: none;*/
 }
 button {
   padding: 0;
@@ -71,11 +71,11 @@ body {
   font-size: 2.4rem;
   line-height: 2.4rem;
   vertical-align: middle;
-  transition: background-color 1s, color 2s;/*0.25s;*/
+  transition: background-color 1s, color .7s;/*0.25s;*/
   background-color: #D9B9A7;
 }
 .webflow-style-input button:hover {
-  color: #66D9AF;
-  background-color: #A68E80;
+  color: #635EF2;
+  background-color: #F2BDC1;
   cursor: pointer;
 }

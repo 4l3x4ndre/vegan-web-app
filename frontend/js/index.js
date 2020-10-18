@@ -12,6 +12,7 @@ function _getValueFromInputField() {
 }
 
 async function _fromUrl(_url, _function) {
+    /* Get the data from the url and pass it to the function */
     fetch(_url)
         .then(function (response) {
             if (response.ok) {
@@ -25,41 +26,6 @@ async function _fromUrl(_url, _function) {
         .catch(function(error) {
             console.log('Il y a eu un problème avec l\'opération fetch: ' + error.message);
         })
-}
-
-function _widgetRecipe(recipe) {
-    /*Return a widget of the recipe to display*/
-
-    let container = document.createElement('div')
-
-    let title = document.createElement('P')
-    title.innerHTML = recipe['title']
-    container.appendChild(title)
-
-    if (recipe['image'] !== undefined && recipe['image'] != null && recipe['image'] !== '') {
-        let img = document.createElement('img')
-        img.src = recipe['image']
-        img.style.width = '25vw'
-        container.appendChild(img)
-    }
-    return container
-}
-
-function _showRecipe(json) {
-    /*Put html elements to show the recipe according to the json of the recipe*/
-
-    // access to the recipe itself
-    let recipe = json['recipes'][0]
-
-    // get the container in which the recipe will appear
-    let container = document.querySelector("#leftcontent")
-
-    // clear the container to ensure only one recipe is printed
-    container.innerHTML = ''
-
-    // add the recipe to the html
-    container.appendChild(_widgetRecipe(recipe))
-    console.log(recipe)
 }
 
 function getRecipeFromIngredients() {

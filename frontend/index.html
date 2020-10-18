@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="./css/styles.css">
         <link rel="stylesheet" href="./css/switchtheme.css">
         <link rel="stylesheet" href="./css/inputstyle.css">
+        <link rel="stylesheet" href="./css/ingredientstag.css">
     </head>
     <body class="darktheme">
 
@@ -18,43 +19,46 @@
 
         <div class="split left">
             <div class="centered">
-                <div id="leftcontent">
-                    <div class="cont">
-                        <div class="webflow-style-input btn">
-                            <button class="centerbutton" type="submit" id="searchrandom" onclick="getRandomRecipe()">
-                                Get a random recipe
-                                <i class="fas fa-paper-plane"></i>
-                            </button>
+                <div class="cont cont-left" id="leftpage-cont">
+                    <div class="webflow-style-input btn">
+                        <button class="centerbutton" type="submit" id="searchrandom" onclick="getRandomRecipe()">
+                            Get a random recipe
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+
+                    <div id="leftcontent">
+                        <div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
         <div class="split right">
             <div class="centered">
-                <div id="rightcontent">
-                    <div class="cont">
-                        <div class="webflow-style-input btn">
-                            <label for="inputquery"></label><input id="inputquery" placeholder="What's your ingredients?"/>
-                            <button type="submit" id="searchquery" onclick="getRecipeFromIngredients()"><i class="fas fa-search"></i></button>
+                <div class="cont cont-right" id="rightpage-cont">
+                    <div class="tagsdivcontainer">
+                        <label for="input_ingredients" id="label_input_ingredients">What are your ingredients?</label>
+                        <div class="tag-container">
+                            <input id="input_ingredients" type='text'>
+                            <button type="submit" id="searchquery" onclick="getRecipeFromIngredients()">
+                                <i class="fas fa-search"></i>
+                            </button>
                         </div>
                     </div>
+
+                    <div id="rightcontent"></div>
+
                 </div>
             </div>
         </div>
 
-<!--        <div class="container">-->
-
-<!--            <div class="demo-flex-spacer"></div>-->
-
-
-<!--            <div class="demo-flex-spacer"></div>-->
-<!--            <div class="demo-flex-spacer"></div>-->
-<!--        </div>-->
-
         <!--<script src="https://kit.fontawesome.com/b4f6af07eb.js" crossorigin="anonymous"></script>-->
-        <script src="./index.js"></script>
-        <script src="UI.js"></script>
-        <script src="./keys.js"></script>
+        <script src='js/index.js'></script>
+        <script src='js/UI.js'></script>
+        <script src='js/keys.js'></script>
+        <script src='js/recipewidget.js'></script>
+        <script src='js/ingredientstag.js'></script>
     </body>
 </html>
