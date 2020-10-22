@@ -1,28 +1,50 @@
+:root {
+    --title-position-empty: 17vh;
+    --title-position-not-empty: 7vh;
+    --title-font-size-empty: 3vw;
+    --title-font-size-not-empty: 1.5vw;
+    --title-opacity-not-empty: 0.85;
+}
+
 body {
     background: #eee;
 }
 
 #label_input_ingredients {
-    display: block;
     padding: 10px;
     color: #3C2F40;
-    font-size: 1.8rem;
-    line-height: 2.4rem;
+    font-size: var(--title-font-size-empty);
+    /*line-height: 2.4rem;*/
     vertical-align: middle;
     text-align: center;
     width: 100%;
+    transition: opacity 1s, top 1s, font-size 1s;
+    position: absolute;
+    left: 0;
+    top: var(--title-position-empty);
+}
+#label_input_ingredients:hover{
+    cursor: text;
 }
 
 .tagsdivcontainer {
-    width: 80%;
-    margin: 30px auto;
+    width: 100%;
+    align-content: center;
+    margin: 60px auto;
+    /*padding: 2vw;*/
+    position: relative;
 }
+
 .tag-container {
     background: #D9B9A7;
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
     padding: 6px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    margin-top: 10vh;
 }
 .tag-container span {
     color: #3C2F40;

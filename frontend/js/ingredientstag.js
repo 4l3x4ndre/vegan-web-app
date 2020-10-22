@@ -49,8 +49,20 @@ function addTags() {
 function labelInputState(empty) {
     if (empty) {
         label_input_ingredients.innerHTML = label_input_messages['empty']
+        label_input_ingredients.style.opacity = '1';
+        label_input_ingredients.style.fontSize =
+            getComputedStyle(document.documentElement).getPropertyValue('--title-font-size-empty')
+        label_input_ingredients.style.top =
+            getComputedStyle(document.documentElement).getPropertyValue('--title-position-empty')
+
     } else {
         label_input_ingredients.innerHTML = label_input_messages['not-empty']
+        label_input_ingredients.style.opacity =
+            getComputedStyle(document.documentElement).getPropertyValue('--title-opacity-not-empty');
+        label_input_ingredients.style.fontSize =
+            getComputedStyle(document.documentElement).getPropertyValue('--title-font-size-not-empty')
+        label_input_ingredients.style.top =
+            getComputedStyle(document.documentElement).getPropertyValue('--title-position-not-empty')
     }
 }
 
@@ -84,6 +96,3 @@ document.addEventListener('click', (e) => {
         labelInputState(true)
     }
 })
-
-input.focus();
-
