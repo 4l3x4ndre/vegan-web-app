@@ -12,11 +12,14 @@
 }
 
 :root {
-  --bg-color: black;
-  --nav-bg-hover: #1E2640;
-  --nav-bg: #313972;
+  --bg-color: #274647;
+  --bg-color2: #4D8C8C;
+  --nav-bg-hover: #234040;
+  --nav-bg: #4D8C8C;
   --nav-text-hover: #D99F84;
   --nav-text: white;
+  --nav-color-shadow: #1C3333;
+  --footer-bg: #181F33;
 }
 
 html, body {
@@ -24,13 +27,12 @@ html, body {
   margin: 0;
 }
 body {
-  background-color: var(--bg-color);
+  background-color: var(--footer-bg);
   color: white;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: 10% 1fr 2fr 2fr 5%;
-  grid-gap: 20px;
+  overflow-x: hidden;
+  min-height: 100%;
 }
+
 nav {
   overflow: hidden;
   background-color:var(--nav-bg);
@@ -39,6 +41,7 @@ nav {
   text-align: center;
   width: 100%;
   margin: 0 auto;
+  box-shadow: 0 10px 10px var(--nav-color-shadow);
 }
 nav ul {
   margin: 0;
@@ -68,30 +71,68 @@ nav a:hover {
 }
 
 .main {
-  position: absolute;
   top: 0;
   left: 0;
   background-image: url("../../resources/3peoples.png");
   background-repeat: no-repeat;
   background-position: center;
-  min-height: 100%;
-  min-width: 100%;
+  background-color: var(--bg-color);
+  background-size: 40%;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 10% .5fr 1fr 2fr 2fr 10%;
+  grid-gap: 20px;
 }
 
 .titles {
   grid-column: 1;
-  grid-row: 2;
-  line-height: 10px;
+  grid-row: 3;
+  line-height: 15px;
   align-content: center;
-  display: block;
+  width: auto;
+  text-shadow: 5px 5px 10px var(--nav-color-shadow);
 }
-h1 {
+.titles h1 {
   text-align: end;
   font-family: "title", sans-serif;
   font-size: calc(1.5rem + 4vw);
 }
-h2 {
+.titles h2 {
   text-align: end;
   font-family: "subtitle", sans-serif;
   font-size: calc(1rem + 1vw);
+}
+
+.content1 {
+  display: block;
+  background: var(--bg-color2);
+  height:100vh;
+  width:100%;
+  padding: 60px 60px 60px 120px;
+  box-sizing:border-box;
+}
+
+footer {
+  clear: both;
+  position: relative;
+  height: 60px;
+  vertical-align: center;
+  background-color: var(--footer-bg);
+  text-align: center;
+}
+
+footer div {
+  height: 100%;
+  font-size: calc(.5rem + .5vw);
+
+  display: flex;
+  align-items: center; /* Vertical center alignment */
+  justify-content: center; /* Horizontal center alignment */
+}
+
+footer span {
+  /*display: inline-block;*/
+  /*vertical-align: middle;*/
 }
