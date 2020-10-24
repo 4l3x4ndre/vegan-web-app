@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Hanaley";
-    src: url("../../halaney/halaney.otf");
+    src: url("../../../halaney/halaney.otf");
 }
 
 /*region WIDGET*/
@@ -44,13 +44,13 @@
     /*z-index: -1;*/
 }
 .cont-left{
-    background-image: url('../resources/scooter.svg');
+    background-image: url('../../resources/scooter.svg');
     background-position: center;
     background-size: 60%;
     background-repeat: no-repeat;
 }
 .cont-right {
-    background-image: url('../resources/truck.svg');
+    background-image: url('../../resources/truck.svg');
     background-position: center;
     background-size: 60%;
     background-repeat: no-repeat;

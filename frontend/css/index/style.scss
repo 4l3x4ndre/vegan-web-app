@@ -1,0 +1,97 @@
+@font-face {
+  font-family: "title";
+  src: url("../../../be-vietnam/BeVietnam-Regular.ttf");
+}
+@font-face {
+  font-family: "subtitle";
+  src: url("../../../be-vietnam/BeVietnam-Thin.ttf");
+}
+@font-face {
+  font-family: "navbar";
+  src: url("../../../be-vietnam/BeVietnam-Light.ttf");
+}
+
+:root {
+  --bg-color: black;
+  --nav-bg-hover: #1E2640;
+  --nav-bg: #313972;
+  --nav-text-hover: #D99F84;
+  --nav-text: white;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+body {
+  background-color: var(--bg-color);
+  color: white;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 10% 1fr 2fr 2fr 5%;
+  grid-gap: 20px;
+}
+nav {
+  overflow: hidden;
+  background-color:var(--nav-bg);
+  position: fixed;
+  top: 0;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  vertical-align: middle;
+  transition: background-color .5s;
+}
+nav a {
+  display: block;
+  color: var(--nav-text);
+  text-decoration: none;
+  font-family: navbar, sans-serif;
+  font-size: 18px;
+  padding: 15px 18px;
+  transition: color 1s;
+}
+nav li:hover{
+  background-color: var(--nav-bg-hover);
+}
+nav a:hover {
+  color: var(--nav-text-hover);
+}
+
+.main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../../resources/3peoples.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+.titles {
+  grid-column: 1;
+  grid-row: 2;
+  line-height: 10px;
+  align-content: center;
+  display: block;
+}
+h1 {
+  text-align: end;
+  font-family: "title", sans-serif;
+  font-size: calc(1.5rem + 4vw);
+}
+h2 {
+  text-align: end;
+  font-family: "subtitle", sans-serif;
+  font-size: calc(1rem + 1vw);
+}

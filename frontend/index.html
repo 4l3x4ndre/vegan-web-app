@@ -2,63 +2,25 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>VEGAN WEB APP</title>
-        <link href="../fontawesome-free-5.15.1-web/css/all.css" rel="stylesheet">
-        <link rel="stylesheet" href="./css/styles.css">
-        <link rel="stylesheet" href="./css/switchtheme.css">
-        <link rel="stylesheet" href="./css/inputstyle.css">
-        <link rel="stylesheet" href="./css/ingredientstag.css">
+        <title>VEGAN - HOME</title>
+        <link rel="stylesheet" href="./css/index/style.scss">
     </head>
-    <body class="darktheme">
-
-
-        <label class="switch">
-            <input type="checkbox" id="lightdark">
-            <span class="slider round"></span>
-        </label>
-
-        <div class="split left">
-            <div class="centered">
-                <div class="cont cont-left" id="leftpage-cont">
-                    <div class="webflow-style-input btn">
-                        <button class="centerbutton" type="submit" id="searchrandom" onclick="getRandomRecipe()">
-                            Get a random recipe
-                            <i class="fas fa-paper-plane"></i>
-                        </button>
-                    </div>
-
-                    <div id="leftcontent">
-                        <div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <div class="split right">
-            <div class="centered">
-                <div class="cont cont-right" id="rightpage-cont">
-                    <div class="tagsdivcontainer">
-                        <label for="input_ingredients" id="label_input_ingredients">What are your ingredients?</label>
-                        <div class="tag-container">
-                            <input id="input_ingredients" type='text'>
-                            <button type="submit" id="searchquery" onclick="getRecipeFromIngredients()">
-                                <i class="fas fa-search"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div id="rightcontent"></div>
-
-                </div>
-            </div>
+    <body>
+        <div class="main"></div>
+        <div class="titles">
+            <h1>Vegan recipes,</h1>
+            <h2>Green food, grenn mind, green life.</h2>
         </div>
 
-        <!--<script src="https://kit.fontawesome.com/b4f6af07eb.js" crossorigin="anonymous"></script>-->
-        <script src='js/index.js'></script>
-        <script src='js/UI.js'></script>
-        <script src='js/keys.js'></script>
-        <script src='js/recipewidget.js'></script>
-        <script src='js/ingredientstag.js'></script>
+        <nav>
+            <ul>
+                <li><a href="#books">Books</a></li>
+                <li><a href="#books">Books</a></li>
+                <li><a href="#books">Books</a></li>
+                <li><a href="#books">Books</a></li>
+                <li><a href="#books">Books</a></li>
+
+            </ul>
+        </nav>
     </body>
 </html>

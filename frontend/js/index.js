@@ -1,4 +1,5 @@
 document.querySelector('#searchquery').addEventListener("click", interaction)
+document.querySelector('#searchrandom').addEventListener("click", interaction)
 
 function _fetchAvailable() {
     /* Checking the existence of fetch() on the client */
@@ -7,7 +8,7 @@ function _fetchAvailable() {
 
 function _getValueFromInputField() {
     /* Get the input from the input field. Use it later in the url */
-    let v = document.querySelector("#inputquery").value
+    let v = document.querySelector("#input_ingredients  ").value
     return v
 }
 
